@@ -1,0 +1,47 @@
+## COMO PREPARAR O AMBIENTE
+
+CRIE UM AMBIENTE VIRTUAL:
+
+# No terminal, caminhe até a pasta raíz do projeto e execute:
+
+python -m venv venv
+.\venv\Scripts\activate 
+
+# Após execução dos comandos, o prompt de comando mostrará o nome do ambiente virtual entre parênteses (venv): 
+
+INSTALE AS DEPENDÊNCIAS DO SPACY: 
+
+# Com o venv ativado, execute os comandos: 
+
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm 
+
+# Após isso, o spacy já deve estar configurado corretamente. 
+# Instale a extensão "spacy" do VS Code. 
+# Teste se todas as configurações foram instaladas corretamente: 
+
+python -m spacy info 
+
+# Crie um arquivo teste.py para testar o carregamento do modelo e inclua o seguinte código: 
+-----------------
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+
+doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
+
+for ent in doc.ents:
+    print(ent.text, ent.label_)
+-----------------
+
+POSSÍVEL ERRO: 
+
+# Ao executar o código, pode retornar: 
+
+OSError: [WinError 126] N�o foi poss�vel encontrar o m�dulo especificado. Error loading "caminho\para\seu\diretorio\Python\Python312\Lib\site-packages\torch\lib\fbgemm.dll" or one of its dependencies.
+
+# Provavelmente, o interpretador está apontando para a versão Python global ao invés do venv. 
+# Para forçar a execução com a versão venv do Python, execute: 
+
+.\venv\Scripts\python.exe .\caminho\para\seu\arquivo\teste.py
