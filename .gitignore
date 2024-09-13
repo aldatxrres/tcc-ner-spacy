@@ -2,4 +2,9 @@ venv/
 .env/
 __pycache__/
 files-SemClinBr/
+annoted-clinical-reports/
+non-used-clinical-reports/
+get-specific-categories.py
+process-XML-files-AldaTorresNote.py
+process-XML-files.py
 teste.py

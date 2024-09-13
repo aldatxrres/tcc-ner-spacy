@@ -1,6 +1,9 @@
 import spacy
 from spacy import displacy
 
+spacy.require_gpu() 
+# require_gpu will raise an error if no GPU is available.
+
 colors = {
     "PROCEDIMENTO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
     "DOENCA": "linear-gradient(90deg, #FC9C9C, #FCFC9C)", 
@@ -11,9 +14,9 @@ colors = {
     "DIAGNOSTICO": "linear-gradient(90deg, #851BE0, #E0806E)",
 }
 
-nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC]NER\\trained-pipeline-tcc")
+nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\trained-pipeline-tcc")
 
-with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC]NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_039.txt", encoding="utf-8") as file:
+with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_039.txt", encoding="utf-8") as file:
     texto = file.read()
 
 doc = nlp(texto)

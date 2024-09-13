@@ -45,3 +45,4 @@ OSError: [WinError 126] N�o foi poss�vel encontrar o m�dulo especificado. 
 # Para forçar a execução com a versão venv do Python, execute: 
 
 .\venv\Scripts\python.exe .\caminho\para\seu\arquivo\teste.py
+.\venv\Scripts\python.exe .\spacy-source\train-new-pipeline.py

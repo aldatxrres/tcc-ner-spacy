@@ -34,8 +34,3 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
     output_file.write(output_str)
 
 print(f"\nOutput salvo em: {output_file_path}")
-
-
-
-
-
