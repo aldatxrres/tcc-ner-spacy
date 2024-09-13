@@ -4,14 +4,26 @@ from spacy import displacy
 spacy.require_gpu() 
 # require_gpu will raise an error if no GPU is available.
 
+# mudar paleta de cores de cada entidade
 colors = {
+    "SINTOMA|SINAL": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "DOENÇA|SINDROME": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "PARTE DO CORPO|ORGAO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
     "PROCEDIMENTO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
-    "DOENCA": "linear-gradient(90deg, #FC9C9C, #FCFC9C)", 
-    "MEDICAMENTO": "linear-gradient(90deg, #9CFC9C, #9CFCFC)",
-    "SINTOMA": "linear-gradient(90deg, #E0551B, #E0A238)",
-    "ESPECIALIDADE": "linear-gradient(90deg, #38E0A2, #6DE0DC)",
-    "REACAO": "linear-gradient(90deg, #E05138, #E0A76E)",
-    "DIAGNOSTICO": "linear-gradient(90deg, #851BE0, #E0806E)",
+    "DISPOSITIVO MEDICO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "CELULA|DISFUNCAO MOLECULAR": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "PROCEDIMENTO DIAGNOSTICO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "FUNCAO FISIOLOGICA": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "CONCLUSAO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "ANTIBIOTICO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "LOCALIZACAO NO CORPO OU REGIAO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "RESULTADO LABORATORIO OU TESTE": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "MEMBRO FAMILIAR": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "ACAO DE CUIDADO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "FARMACO|HORMONIO|PROTEINA": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "LESAO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "ENVENENAMENTO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
+    "BACTERIA": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
 }
 
 nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\trained-pipeline-tcc")
